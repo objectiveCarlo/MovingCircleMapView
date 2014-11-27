@@ -25,7 +25,7 @@
 
 
 + (CircularAnnotationManager *)makeAnnotationsWithCoordinate:(CLLocationCoordinate2D)newCoordinate withRadius:(CLLocationDistance)radius {
-
+    
     CircularAnnotationManager *collection = [[CircularAnnotationManager alloc] initWithCoordinate:newCoordinate withRadius:radius];
     
     return collection;
@@ -61,7 +61,7 @@
             if (annotation.parent && [annotation.parent respondsToSelector:@selector(updateRadius:mapView:)]) {
                 
                 CLLocationDistance newRadius = [annotation.parent computeNewRadiusWithNewCoordinatesOfHandle:droppedAt];
-                
+                [annotation setRadius:newRadius];
                 [annotation.parent updateRadius:newRadius mapView:mapView];
             }
             
@@ -102,7 +102,7 @@
         self.circleOverlay = [CircleMapOverlay circleWithCenterCoordinate:newCoordinate radius:radius];
         
         self.centerAnnotation = [[CircleCenterAnnotation alloc] initWithCoordinate:newCoordinate];
-    
+        
         self.handleAnnotation = [[CircleHandleAnnotation alloc] initWithCoordinate:newCoordinate withRadius:radius];
         
         [self.annotations addObject:self.handleAnnotation];
