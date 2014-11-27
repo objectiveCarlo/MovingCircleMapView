@@ -61,7 +61,7 @@
             if (annotation.parent && [annotation.parent respondsToSelector:@selector(updateRadius:mapView:)]) {
                 
                 CLLocationDistance newRadius = [annotation.parent computeNewRadiusWithNewCoordinatesOfHandle:droppedAt];
-                [annotation setRadius:newRadius];
+                [annotation setRadius:newRadius withRefreshingTheCoordinates:NO];
                 [annotation.parent updateRadius:newRadius mapView:mapView];
             }
             
@@ -154,8 +154,7 @@
 
 - (void)updateCenterCoordinate:(CLLocationCoordinate2D)newCoordinate mapView:(MKMapView *)mapView {
     
-    [self.centerAnnotation setCoordinate:newCoordinate];
-    [self.handleAnnotation setCoordinate:newCoordinate];
+    [self.handleAnnotation correctCoordinate:newCoordinate];
     
     [self updateCircleOverlayWithCoordinate:newCoordinate radius:self.circleOverlay.radius mapView:mapView];
 }

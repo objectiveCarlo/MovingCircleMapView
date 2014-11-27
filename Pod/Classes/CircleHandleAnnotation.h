@@ -20,5 +20,6 @@
 - (id)initWithCoordinate:(CLLocationCoordinate2D)newCoordinate withRadius:(CLLocationDistance)radius;
 
 - (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate;
-
+- (void)setRadius:(CLLocationDistance)radius withRefreshingTheCoordinates:(BOOL)refreshCoordinates;
+- (void)correctCoordinate:(CLLocationCoordinate2D)newCoordinate;
 @end

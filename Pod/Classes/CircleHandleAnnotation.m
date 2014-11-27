@@ -20,6 +20,7 @@
         
         _radius = radius;
         [self setCoordinate:newCoordinate];
+        [self correctCoordinate:newCoordinate];
         _originalCoordinates = coordinate;
     }
     
@@ -33,13 +34,20 @@
     return nil;
 }
 
-- (void)setRadius:(CLLocationDistance)radius {
+- (void)setRadius:(CLLocationDistance)radius withRefreshingTheCoordinates:(BOOL)refreshCoordinates {
     
     _radius = radius;
-    [self setCoordinate:_originalCoordinates];
+    if (refreshCoordinates)
+        [self setCoordinate:_originalCoordinates];
 }
 
 - (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate {
+    
+    coordinate = newCoordinate;
+    
+}
+
+- (void)correctCoordinate:(CLLocationCoordinate2D)newCoordinate {
     
     
     CLLocationDegrees longitude = newCoordinate.longitude;
