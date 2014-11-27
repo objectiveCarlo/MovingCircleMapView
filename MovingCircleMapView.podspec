@@ -10,13 +10,8 @@
 Pod::Spec.new do |s|
   s.name             = "MovingCircleMapView"
   s.version          = "0.0.1"
-  s.summary          = "A short description of MovingCircleMapView."
-  s.description      = <<-DESC
-                       An optional longer description of MovingCircleMapView
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
+  s.summary          = "A library for allowing developers to create movable and resizable MKCircle in the MKMapkit framework"
+  s.description      = "There is no direct way in resizing and moving a MKCircle instance in the Mapkit framework. This library provides a simple way to do things."
   s.homepage         = "https://github.com/objectiveCarlo/MovingCircleMapView.git"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
