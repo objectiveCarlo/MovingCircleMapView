@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MovingCircleMapView"
-  s.version          = "0.0.1"
+  s.version          = "0.0.2"
   s.summary          = "A library for allowing developers to create movable and resizable MKCircle in the MKMapkit framework"
   s.description      = "There is no direct way in resizing and moving a MKCircle instance in the Mapkit framework. This library provides a simple way to do things."
   s.homepage         = "https://github.com/objectiveCarlo/MovingCircleMapView.git"
