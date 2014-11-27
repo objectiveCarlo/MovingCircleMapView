@@ -20,7 +20,7 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-Carlo Luis Bation, cbation@isbx.com
+Carlo Luis Bation, carloluisbation@gmail.com
 
 ## License
 
