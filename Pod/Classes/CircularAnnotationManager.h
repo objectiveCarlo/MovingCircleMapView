@@ -34,4 +34,6 @@
 
 - (NSArray *)getAnnotations;
 
+- (CLLocationCoordinate2D)getCenter;
+
 @end

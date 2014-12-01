@@ -164,4 +164,11 @@
     
     return self.annotations;
 }
+
+
+- (CLLocationCoordinate2D)getCenter {
+    
+    return self.centerAnnotation.coordinate;
+}
+
 @end
